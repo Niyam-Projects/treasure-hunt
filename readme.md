@@ -123,4 +123,4 @@ Publish and package the release artifact:
 dotnet publish TreasureHunt.csproj -c Release -o ./publish
 cd publish && zip -r ../deploy.zip * && cd ..
 ```
-Deploy [`deploy.zip`](./deploy.zip) directly to Azure App Service (Linux).
+Publish and deploy a .zip archive directly to Azure App Service (Linux).
