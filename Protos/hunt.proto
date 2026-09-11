@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "TreasureHunt";
+
+package hunt;
+
+// The final boss. Discover this service using gRPC reflection.
+service Hunt {
+  rpc Complete (CompleteRequest) returns (CompleteReply);
+}
+
+message CompleteRequest {
+  string token = 1;
+}
+
+message CompleteReply {
+  bool   success      = 1;
+  string bonus_key    = 2;
+  string instructions = 3;
+}
